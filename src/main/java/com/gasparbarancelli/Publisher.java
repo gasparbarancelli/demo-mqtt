@@ -16,7 +16,7 @@ public class Publisher {
             MqttClient client = new MqttClient(BROKER_URL, CLIENT_ID, new MemoryPersistence());
             client.connect();
 
-            String mensagem = args.length == 0 ? "Olá, Mosquitto! Mensagem de teste via MQTT." : args[0];
+            String mensagem = args.length == 0 ? "Olá! Mensagem de teste via MQTT." : args[0];
             MqttMessage mqttMessage = new MqttMessage(mensagem.getBytes());
             mqttMessage.setQos(1);
 
